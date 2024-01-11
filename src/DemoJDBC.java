@@ -13,10 +13,10 @@ Connection connection=DriverManager.getConnection(url,user,password);
 
 Statement statement= connection.createStatement();
 ResultSet result= statement.executeQuery(query);
-        //System.out.println(result.next()); // if there is another row or col present or not
+
         result.next();
         String name=result.getString("name");
-
+        System.out.println("Connect ");
         connection.close();// close the connection
         System.out.println("Connect Closed");
     }
